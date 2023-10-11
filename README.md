@@ -17,7 +17,7 @@ Este repositório é uma recriação do meu portfólio online, destinado a mostr
 - Tailwind CSS para estilos responsivos
 - Integração com a API do GitHub para exibir repositórios
 
-🌐 Acesse o portfólio ao vivo em [seu site aqui]
+🌐 Acesse o portfólio ao vivo [Clicando aqui](https://portifolio-react-rose-tau.vercel.app/)
 
 Fique à vontade para explorar meu trabalho e projetos, e sinta-se à vontade para entrar em contato se você tiver alguma pergunta ou oportunidade de colaboração.
 
