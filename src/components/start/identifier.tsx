@@ -2,9 +2,10 @@ import Image from "next/image";
 import boy from "../../assets/boy.png";
 import Container from "../container/container";
 import { Button } from "../ui/button";
+import { useRouter } from "next/navigation";
 
 export default function Identifier() {
-  function enterContac() {}
+  const router = useRouter();
 
   return (
     <Container>
@@ -26,13 +27,16 @@ export default function Identifier() {
           </h4>
           <div className="mt-6 md:mt-9">
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-7">
-              <Button className="border text-base md:text-lg rounded p-4 md:p-6 hover:bg-white hover:text-black">
+              <Button
+                onClick={() => {
+                  router.push("/#contact");
+                }}
+                className="border text-base md:text-lg rounded p-4 md:p-6 hover:bg-white hover:text-black"
+              >
                 Entre em contato
               </Button>
               <Button
-                onClick={() => {
-                  enterContac();
-                }}
+                onClick={() => {}}
                 className="border rounded text-base md:text-lg p-4 md:p-6 border-red-600 text-red-600 hover:bg-white hover:text-black"
               >
                 CV Download

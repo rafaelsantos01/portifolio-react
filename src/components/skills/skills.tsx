@@ -1,17 +1,23 @@
 import Container from "../container/container";
 import Title from "../title/title";
 import Image from "next/image";
-import java from "../../assets/java.png";
-import spring from "../../assets/spring.png";
-import react from "../../assets/react.png";
-import postgres from "../../assets/postgre.png";
-import git from "../../assets/git2.png";
-import js from "../../assets/js.png";
-import ts from "../../assets/ts.png";
+import java from "../../assets/java-original.svg";
+import spring from "../../assets/spring-original.svg";
+import react from "../../assets/react-original.svg";
+import postgres from "../../assets/postgresql-plain-wordmark.svg";
+import git from "../../assets/git-original.svg";
+import js from "../../assets/javascript-plain.svg";
+import ts from "../../assets/typescript-plain.svg";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
 
@@ -95,6 +101,9 @@ export default function Skills() {
                         <CardTitle className="flex justify-center">
                           {data.title}
                         </CardTitle>
+                        <CardDescription className="flex justify-center">
+                          {data.description}
+                        </CardDescription>
                       </CardHeader>
                       <CardContent className="flex justify-center">
                         <Image src={data.img} width={150} height={150} alt="" />
