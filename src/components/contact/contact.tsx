@@ -15,17 +15,21 @@ export default function Contact() {
           <SocialIcon
             className="hover:animate-pulse"
             network="github"
-            url="https://github.com/rafaelsantos01"
+            url="http://github.com/rafaelsantos01"
+            target="_blank"
           />
+
           <SocialIcon
             className="hover:animate-pulse"
             network="linkedin"
             url="https://www.linkedin.com/in/rafael-santos-7a938b237/"
+            target="_blank"
           />
           <SocialIcon
             className="hover:animate-pulse"
             network="whatsapp"
             url="https://wa.me/55047996581330"
+            target="_blank"
           />
         </div>
         <div className="w-full md:w-2/6 mt-4">
