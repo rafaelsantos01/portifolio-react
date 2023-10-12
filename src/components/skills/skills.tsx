@@ -8,13 +8,12 @@ import postgres from "../../assets/postgre.png";
 import git from "../../assets/git2.png";
 import js from "../../assets/js.png";
 import ts from "../../assets/ts.png";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
 
 const items = [
   {
@@ -64,20 +63,70 @@ export default function Skills() {
         <Title title="Skills" />
       </div>
       <div className="flex flex-col md:flex-row items-center justify-center">
-        {items.map((data, index) => (
-          <div key={index} className="flex md:w-44 ">
-            <Card className="border border-red-600 rounded hover:animate-pulse">
-              <CardHeader>
-                <CardTitle>{data.title}</CardTitle>
-                <CardDescription>{data.description}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Image src={data.img} width={100} height={100} alt="" />
-              </CardContent>
-            </Card>
+        <section className="pb-[2rem] bg-black">
+          <div className="lg:mx-auto max-w-md ">
+            <Swiper
+              modules={[EffectCoverflow, Pagination, Autoplay]}
+              effect={"coverflow"}
+              loop={true}
+              spaceBetween={30}
+              slidesPerView={3}
+              pagination={{
+                clickable: true,
+              }}
+              centeredSlides={true}
+              grabCursor={true}
+              coverflowEffect={{
+                rotate: 0,
+                slideShadows: false,
+              }}
+              autoplay={{
+                delay: 3000,
+                stopOnLastSlide: false,
+                disableOnInteraction: false,
+              }}
+              className="coverflow"
+            >
+              {items.map((data, index) => {
+                return (
+                  <SwiperSlide key={index}>
+                    <Card className="border  border-red-600 rounded hover:animate-pulse">
+                      <CardHeader>
+                        <CardTitle className="flex justify-center">
+                          {data.title}
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <Image src={data.img} width={150} height={150} alt="" />
+                      </CardContent>
+                    </Card>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
           </div>
-        ))}
+        </section>
       </div>
     </Container>
   );
 }
+
+{
+  /* <div>
+<Carrosel />
+</div> */
+}
+// {items.map((data, index) => (
+//   <div key={index} className="flex md:w-44 ">
+
+//       <Card className="border border-red-600 rounded hover:animate-pulse">
+//        <CardHeader>
+//          <CardTitle>{data.title}</CardTitle>
+//          <CardDescription>{data.description}</CardDescription>
+//        </CardHeader>
+//        <CardContent>
+//          <Image src={data.img} width={100} height={100} alt="" />
+//       </CardContent>
+//      </Card>
+//    </div>
+//  ))}
