@@ -64,12 +64,12 @@ export default function Skills() {
       </div>
       <div className="flex flex-col md:flex-row items-center justify-center">
         <section className="pb-[2rem] bg-black">
-          <div className="lg:mx-auto max-w-md ">
+          <div className="lg:mx-auto max-w-sm md:max-w-7xl">
             <Swiper
               modules={[EffectCoverflow, Pagination, Autoplay]}
               effect={"coverflow"}
               loop={true}
-              spaceBetween={30}
+              spaceBetween={10}
               slidesPerView={3}
               pagination={{
                 clickable: true,
@@ -81,7 +81,7 @@ export default function Skills() {
                 slideShadows: false,
               }}
               autoplay={{
-                delay: 3000,
+                delay: 2000,
                 stopOnLastSlide: false,
                 disableOnInteraction: false,
               }}
@@ -90,13 +90,13 @@ export default function Skills() {
               {items.map((data, index) => {
                 return (
                   <SwiperSlide key={index}>
-                    <Card className="border  border-red-600 rounded hover:animate-pulse">
+                    <Card className="border max-w-sm border-red-600 rounded hover:animate-pulse">
                       <CardHeader>
                         <CardTitle className="flex justify-center">
                           {data.title}
                         </CardTitle>
                       </CardHeader>
-                      <CardContent>
+                      <CardContent className="flex justify-center">
                         <Image src={data.img} width={150} height={150} alt="" />
                       </CardContent>
                     </Card>
