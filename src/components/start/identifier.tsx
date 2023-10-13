@@ -19,7 +19,7 @@ export default function Identifier() {
       >
         <div className="text-white select-none">
           <h3 className="font-medium text-2xl md:text-4xl">Olá, meu nome é</h3>
-          <h1 className="font-semibold text-4xl sm:text-xl md:text-4xl lg:text-5xl xl:text-7xl 2xl:text-8xl">
+          <h1 className="font-semibold text-4xl sm:text-xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
             <span className="text-red-600">Ra</span>
             fael P<span className="text-red-600">. D</span>
             os <span className="text-red-600">Sant</span>

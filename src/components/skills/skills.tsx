@@ -72,11 +72,9 @@ export default function Skills() {
         <section className="pb-[2rem] bg-black">
           <div className="lg:mx-auto max-w-sm md:max-w-7xl">
             <Swiper
-              modules={[EffectCoverflow, Pagination, Autoplay]}
+              modules={[EffectCoverflow, Autoplay]}
               effect={"coverflow"}
               loop={true}
-              spaceBetween={10}
-              slidesPerView={3}
               pagination={{
                 clickable: true,
               }}
@@ -90,6 +88,16 @@ export default function Skills() {
                 delay: 2000,
                 stopOnLastSlide: false,
                 disableOnInteraction: false,
+              }}
+              breakpoints={{
+                0: {
+                  spaceBetween: 10,
+                  slidesPerView: 3,
+                },
+                1280: {
+                  spaceBetween: 20,
+                  slidesPerView: 4,
+                },
               }}
               className="coverflow"
             >
