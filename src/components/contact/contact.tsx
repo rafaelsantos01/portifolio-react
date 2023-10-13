@@ -6,7 +6,7 @@ import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { useState } from "react";
-import axios from "axios";
+import { ImSpinner } from "react-icons/im";
 import { toast } from "../ui/use-toast";
 import emailjs from "@emailjs/browser";
 
@@ -14,9 +14,11 @@ export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [spin, setSpin] = useState(false);
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
+    setSpin(true);
 
     const templateParams = {
       from_name: name,
@@ -39,12 +41,14 @@ export default function Contact() {
         setName("");
         setEmail("");
         setMessage("");
+        setSpin(false);
       })
       .catch((err: any) => {
         toast({
           variant: "destructive",
           description: "Algo deu errado!",
         });
+        setSpin(false);
       });
   };
 
@@ -52,7 +56,7 @@ export default function Contact() {
     <Container>
       <div className="flex flex-col items-center justify-center" id="contact">
         <Title title="Contact" />
-        <div className="flex space-x-7 mt-11">
+        <div className="flex space-x-7 mt-11 mb-6">
           <SocialIcon
             className="hover:animate-pulse"
             network="github"
@@ -101,9 +105,19 @@ export default function Contact() {
                   value={message}
                   onChange={(event) => setMessage(event.target.value)}
                 />
-                <Button className="rounded text-lg p-6 bg-red-600 hover:bg-red-500 hover:text-white">
-                  Enviar
-                </Button>
+
+                {spin == false && (
+                  <Button className="rounded text-lg p-6 bg-red-600 hover:bg-red-500 hover:text-white">
+                    Enviar
+                  </Button>
+                )}
+                {spin == true && (
+                  <Button className="rounded text-lg p-6 bg-red-600 hover:bg-red-500 hover:text-white">
+                    <div className="animate-spin">
+                      <ImSpinner />
+                    </div>
+                  </Button>
+                )}
               </form>
             </CardContent>
           </Card>
