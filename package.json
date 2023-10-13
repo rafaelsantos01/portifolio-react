@@ -9,8 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-toast": "^1.1.5",
     "@types/react-slick": "^0.23.10",
+    "axios": "^1.5.1",
     "bootstrap-icons": "^1.11.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
