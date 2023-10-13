@@ -9,7 +9,7 @@ export default function About() {
       <div className="justify-centers items-center md:flex my-20" id="about">
         <div className="flex items-center justify-center md:flex-none">
           <Image
-            className=" rounded-full w-40 h-40 md:w-[400px] md:h-[400px] border border-red-600"
+            className=" rounded-full w-40 h-40 md:w-[300px] md:h-[300px] border border-red-600"
             src={myPhoto}
             alt={""}
             width={400}
@@ -22,20 +22,29 @@ export default function About() {
             <Title title="About" />
           </div>
           <div className="select-none">
-            Meu nome é Rafael Pereira Dos Santos, sou do PR e atualmente moro em
-            Brusque-SC. No momento trabalho na área de TI com hardware, tenho
-            mais de 7 anos de experiência na área. Já passei pelas seguintes
-            empresas ligadas a tecnologia: PCPRIME e Brusoft, todas atuei como
-            técnico e desempenhei meu papel da melhor forma possível. Sempre
-            tive interesse em trabalhar com Software, o desenvolvimento em
-            específico. Porem minha primeira oportunidade para entrar na área
-            foi a do Hardware. Foi uma grande experiência absorvi tudo oque foi
-            possível. Em 2021 decidi dar o primeiro passo na área do Software
-            .Iniciei um curso Técnico em desenvolvimento de sistemas no Senai,
-            esta sendo uma grande experiência ja fiz alguns bootcamps, tenho
-            alguns cursos na udemy dentre outros. Estou cada vez mais gostando e
-            decidido a mudar de vez de carreira, meu planejamento é ainda este
-            ano 2022 conseguir uma oportunidade para começar a atuar como dev.
+            <p className="mb-2">
+              Olá, meu nome é Rafael, tenho 27 anos e sou natural do Paraná.
+              Atualmente, resido em Brusque, SC. Tenho uma sólida experiência
+              como técnico de informática, com foco em atendimento ao cliente e
+              manutenção de computadores,servidores e redes. Trabalhei por mais
+              de 7 anos nesse setor, colaborando com empresas de destaque na
+              região. Sempre busquei aprimorar minhas habilidades e adquirir
+              novos conhecimentos.
+            </p>
+            <p className="mb-2">
+              Cheguei a um ponto em que a área estava se tornando relativamente
+              rotineira. Foi então que decidi encarar novos desafios e me
+              empenhei em estudar para me tornar um desenvolvedor Full-Stack,
+              dominando tecnologias como React, Next.js, TypeScript, Java,
+              Postgres e Git. Atualmente, sou parte da equipe como desenvolvedor
+              Full-Stack na Quantus, desde o dia 8 de setembro de 2022.
+            </p>
+            <p className="mb-2">
+              Além de fixar e ampliar meus conhecimentos nas tecnologias que já
+              domino, meus planos futuros na área de tecnologia incluem
+              aprimorar meu domínio no inglês, acreditando que isso me ajudará a
+              crescer ainda mais e alcançar novas oportunidades.
+            </p>
           </div>
         </div>
       </div>
