@@ -147,7 +147,7 @@ export default function Projects() {
                   return (
                     <SwiperSlide key={index}>
                       <div>
-                        <Card className="border-red-600 rounded max-h-[400px] ">
+                        <Card className="border-red-600 rounded max-h-[400px]">
                           <CardHeader>
                             <Image
                               className="h-32 w-96"
@@ -161,7 +161,7 @@ export default function Projects() {
                               {data.title}
                             </CardTitle>
                           </CardHeader>
-                          <CardContent>
+                          <CardContent className="min-h-[120px]">
                             <div>
                               <CardDescription className="font-medium text-sm select-none">
                                 {data.description}
