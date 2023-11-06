@@ -17,7 +17,7 @@ const nextConfig = {
     return config
   },
   images: {
-    domains: ["i.postimg.cc","rafaelsantos01.github.io"],
+    domains: ["i.postimg.cc","rafaelsantos01.github.io","www.flickr.com","postimg.cc"],
   },
 }
 

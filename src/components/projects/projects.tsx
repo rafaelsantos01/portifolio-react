@@ -1,5 +1,4 @@
-import { Carousel } from "react-responsive-carousel";
-import CardProject from "../cardProject/cardProject";
+
 import Container from "../container/container";
 import Title from "../title/title";
 import Image from "next/image";
@@ -15,84 +14,27 @@ import {
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Autoplay,
-  EffectCoverflow,
   Mousewheel,
   Navigation,
-  Pagination,
   Scrollbar,
 } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import { useRouter } from "next/navigation";
 
-import aluraTube from "../../assets/aluratube.png";
-import portifolio from "../../assets/portifolio.png";
-import financeone from "../../assets/financeone.png";
-import fk from "../../assets/fksystem.png";
-import breve from "../../assets/breve.jpg";
+interface IProjects {
+  title: string;
+  description: string;
+  urlImage: string;
+  linkGit: string;
+  linkLive: string;
+}
 
-const mockRep = [
-  {
-    title: "AluraTube",
-    description:
-      "Esse projeto foi feito em Next.JS, foi conduzido por uma imersao da Alura.Aonde me mostrou muitos pontos importantes e poque trabalhar com Next.Js",
-    urlImage: aluraTube,
-    linkGit: "https://github.com/rafaelsantos01/AluraTube-React",
-    linkLive: "https://alura-tube-react-hssl.vercel.app/",
-  },
-  {
-    title: "Portfólio",
-    description:
-      "Esse projeto foi desenvolvildo em HTML, JS e LAS. Tem como objetivo principal o estudo das linguagens citadas anteriormente e tambem me deixa a amostra na WEB.",
-    urlImage: portifolio,
-    linkGit: "https://github.com/rafaelsantos01/portifolioweb",
-    linkLive: "https://rafaelsantos01.github.io/",
-  },
-  {
-    title: "Educação Financeira",
-    description:
-      "Projeto foi um desafio proposto pela StartSE, que tinha como tema Como podemos ajudar os brasileiros a se organizar melhor financeiramente.",
-    urlImage: financeone,
-    linkGit: "https://github.com/rafaelsantos01/projeto01startse",
-    linkLive: "https://financeonebrasil.netlify.app/",
-  },
-  {
-    title: "FkSystem",
-    description:
-      "Esse foi um projeto feito em Java, tem como função controle de OS, clientes, fornecedores e contas a pagar e receber.Contem um banco de dados em MySQL",
-    urlImage: fk,
-    linkGit: "https://github.com/rafaelsantos01/br.com.prime.os",
-    linkLive: "https://github.com/rafaelsantos01/br.com.prime.os",
-  },
-  {
-    title: "Em breve",
-    description:
-      "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy thpecimen text  since thpecimen book",
-    urlImage: breve,
-    linkGit: "https://github.com/rafaelsantos01",
-    linkLive: "https://github.com/rafaelsantos01",
-  },
-  {
-    title: "Em breve",
-    description:
-      "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy thpecimen text  since thpecimen book",
-    urlImage: breve,
-    linkGit: "https://github.com/rafaelsantos01",
-    linkLive: "https://github.com/rafaelsantos01",
-  },
-  {
-    title: "Em breve",
-    description:
-      "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy thpecimen text  since thpecimen book",
-    urlImage: breve,
-    linkGit: "https://github.com/rafaelsantos01",
-    linkLive: "https://github.com/rafaelsantos01",
-  },
-];
+interface IProjectsProps {
+  projects: IProjects[];
+}
 
-export default function Projects() {
-  const router = useRouter();
+export default function Projects({ projects }: IProjectsProps) {
   return (
     <Container>
       <div id="projects">
@@ -143,7 +85,7 @@ export default function Projects() {
                 }}
                 className="breakpoint"
               >
-                {mockRep.map((data, index) => {
+                {projects.map((data, index) => {
                   return (
                     <SwiperSlide key={index}>
                       <div>
@@ -155,6 +97,7 @@ export default function Projects() {
                               alt={""}
                               width={300}
                               height={300}
+                              priority
                             />
 
                             <CardTitle className="text-red-600 select-none">

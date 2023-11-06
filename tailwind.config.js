@@ -13,18 +13,10 @@ module.exports = {
       padding: "2rem",
       screens: {
         "2xl": "1400px",
-
         'sm': '414px',
-        // => @media (min-width: 640px) { ... }
-  
         'md': '768px',
-        // => @media (min-width: 768px) { ... }
-  
         'lg': '1024px',
-        // => @media (min-width: 1024px) { ... }
-  
         'xl': '1280px',
-        // => @media (min-width: 1280px) { ... }
       },
     },
     extend: {
@@ -85,6 +77,12 @@ module.exports = {
             transform: "translate(0, -100%)",
           },
         },
+      },
+      scrollbar: {
+        width: '12px',
+        trackBackgroundColor: 'gray-200',
+        thumbBackgroundColor: 'red-500',
+        thumbBorderRadius: '8px',
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",

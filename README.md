@@ -15,7 +15,7 @@ Este repositório é uma recriação do meu portfólio online, destinado a mostr
 - React para criação do front-end
 - Next.js para otimização e pré-renderização
 - Tailwind CSS para estilos responsivos
-- Integração com a API do GitHub para exibir repositórios
+- Integração com o firebase para exposição e atualização dos projetos
 
 🌐 Acesse o portfólio ao vivo [Clicando aqui](https://portifolio-react-rose-tau.vercel.app/)
 

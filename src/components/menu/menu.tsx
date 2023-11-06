@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { CiMenuBurger, CiMenuFries } from "react-icons/ci";
-import rafaSantos from "../../assets/logo.svg";
+import rafaSantos from "../../assets/code-logo.png";
 
 const Menu = ({ children }: any) => {
   let [open, setOpen] = useState(false);
@@ -19,7 +19,7 @@ const Menu = ({ children }: any) => {
       <div className="shadow-md w-full fixed z-20 top-0 left-0 ">
         <div className="md:flex items-center justify-between bg-black py-4 md:px-10 px-7">
           <div className="justify-between ">
-            <Image alt={""} width={40} height={40} src={rafaSantos} />
+            <Image alt={""} width={50} height={50} src={rafaSantos} priority />
           </div>
 
           <div

@@ -51,7 +51,7 @@ export default function Identifier() {
           </div>
         </div>
         <div className="mt-6 md:mt-0">
-          <Image className="" src={boy} alt="" width={460} height={460} />
+          <Image className="" src={boy} alt="" width={460} height={460} priority/>
         </div>
       </div>
     </Container>

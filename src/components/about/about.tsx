@@ -3,6 +3,7 @@ import myPhoto from "../../assets/P_20191226_185840.jpg";
 import Container from "../container/container";
 import Title from "../title/title";
 
+
 export default function About() {
   return (
     <Container>
