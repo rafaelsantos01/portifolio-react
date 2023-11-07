@@ -24,27 +24,24 @@ export default function About() {
           </div>
           <div className="select-none">
             <p className="mb-2">
-              Olá, meu nome é Rafael, tenho 27 anos e sou natural do Paraná.
-              Atualmente, resido em Brusque, SC. Tenho uma sólida experiência
-              como técnico de informática, com foco em atendimento ao cliente e
-              manutenção de computadores,servidores e redes. Trabalhei por mais
-              de 7 anos nesse setor, colaborando com empresas de destaque na
-              região. Sempre busquei aprimorar minhas habilidades e adquirir
-              novos conhecimentos.
+              Meu nome é Rafael, um desenvolvedor Full-Stack com mais de um ano
+               de experiência, atualmente residindo em Brusque, SC.
             </p>
             <p className="mb-2">
-              Cheguei a um ponto em que a área estava se tornando relativamente
-              rotineira. Foi então que decidi encarar novos desafios e me
-              empenhei em estudar para me tornar um desenvolvedor Full-Stack,
-              dominando tecnologias como React, Next.js, TypeScript, Java,
-              Postgres e Git. Atualmente, sou parte da equipe como desenvolvedor
-              Full-Stack na Quantus, desde o dia 8 de setembro de 2022.
+            Iniciei minha carreira como técnico de informática, acumulando mais de sete anos de experiência em manutenção de computadores, 
+            servidores e redes, colaborando com empresas de destaque na região. Essa sólida base preparou o terreno para minha transição para a programação, onde 
+            encontrei minha verdadeira paixão.
+            Como desenvolvedor Full-Stack, faço parte da equipe da Quantus há mais de um ano. Nessa jornada, contribuí para projetos desafiadores,
+            incluindo a implementação de tecnologias como Kafka e Keycloak, além do desenvolvimento de uma arquitetura de microsserviços.
             </p>
             <p className="mb-2">
-              Além de fixar e ampliar meus conhecimentos nas tecnologias que já
-              domino, meus planos futuros na área de tecnologia incluem
-              aprimorar meu domínio no inglês, acreditando que isso me ajudará a
-              crescer ainda mais e alcançar novas oportunidades.
+            Minha abordagem à programação é impulsionada pela curiosidade e pela vontade de enfrentar desafios complexos. Ao longo do tempo, 
+            desenvolvi uma série de projetos pessoais, cada um adicionando um novo nível de complexidade à minha habilidade como desenvolvedor. Atualmente, 
+            busco a evolução constante e a transição para a posição de desenvolvedor Pleno.
+            
+            </p>
+            <p className="mb-2">
+            Estou ansioso para o que o futuro reserva em minha carreira na tecnologia e estou sempre em busca de novas oportunidades de crescimento e aprendizado.
             </p>
           </div>
         </div>
