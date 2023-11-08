@@ -17,7 +17,7 @@ const Menu = ({ children }: any) => {
   return (
     <div>
       <div className="shadow-md w-full fixed z-20 top-0 left-0 ">
-        <div className="md:flex items-center justify-between bg-black py-4 md:px-10 px-7">
+        <div className="md:flex items-center justify-between bg-black py-4 md:px-60  px-7">
           <div className="justify-between ">
             <Image alt={""} width={50} height={50} src={rafaSantos} priority />
           </div>
