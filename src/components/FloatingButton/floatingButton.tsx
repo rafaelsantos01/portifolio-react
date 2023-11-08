@@ -14,7 +14,7 @@ const FloatingButton = () => {
         }}
         className=" py-7 px-2 rounded-full shadow-lg hover:animate-pulse"
       >
-        <BsFillArrowUpCircleFill color="#dc2626" size={38} />
+        <BsFillArrowUpCircleFill color="#dd1010" size={38} />
       </Button>
     </div>
   );

@@ -100,13 +100,13 @@ export default function Projects({ projects }: IProjectsProps) {
                               priority
                             />
 
-                            <CardTitle className="text-red-600 select-none">
+                            <CardTitle className="text-red-600 select-none ">
                               {data.title}
                             </CardTitle>
                           </CardHeader>
                           <CardContent className="min-h-[120px]">
                             <div>
-                              <CardDescription className="font-medium text-sm select-none">
+                              <CardDescription className="font-medium text-sm select-none text-white">
                                 {data.description}
                               </CardDescription>
                             </div>
@@ -124,7 +124,7 @@ export default function Projects({ projects }: IProjectsProps) {
                               onClick={() => {
                                 window.open(`${data.linkGit}`);
                               }}
-                              className="border border-red-600 text-sm rounded select-none  hover:bg-white hover:text-black "
+                              className="border border-red-600  text-white text-sm rounded select-none  hover:bg-white hover:text-black "
                             >
                               GitHub Repo
                             </Button>

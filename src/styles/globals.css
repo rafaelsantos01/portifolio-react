@@ -34,3 +34,10 @@ body {
   background-color: #dd1010; 
   border-radius: 8px; 
 }
+
+
+.text-red-600 { color: #dd1010; }
+
+.border-red-600{ border-color: #dd1010;}
+
+.decoration-red-600{text-decoration-color:#dd1010}
