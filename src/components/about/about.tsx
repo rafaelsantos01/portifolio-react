@@ -28,14 +28,14 @@ export default function About() {
                de experiência, atualmente residindo em Brusque, SC.
             </p>
             <p className="mb-2">
-            Iniciei minha carreira como técnico de informática, acumulando mais de sete anos de experiência em manutenção de computadores, 
+              Iniciei minha carreira como técnico de informática, acumulando mais de sete anos de experiência em manutenção de computadores, 
             servidores e redes, colaborando com empresas de destaque na região. Essa sólida base preparou o terreno para minha transição para a programação, onde 
             encontrei minha verdadeira paixão.
             Como desenvolvedor Full-Stack, faço parte da equipe da Quantus há mais de um ano. Nessa jornada, contribuí para projetos desafiadores,
             incluindo a implementação de tecnologias como Kafka e Keycloak, além do desenvolvimento de uma arquitetura de microsserviços.
             </p>
             <p className="mb-2">
-            Minha abordagem à programação é impulsionada pela curiosidade e pela vontade de enfrentar desafios complexos. Ao longo do tempo, 
+              Minha abordagem à programação é impulsionada pela curiosidade e pela vontade de enfrentar desafios complexos. Ao longo do tempo, 
             desenvolvi uma série de projetos pessoais, cada um adicionando um novo nível de complexidade à minha habilidade como desenvolvedor. Atualmente, 
             busco a evolução constante e a transição para a posição de desenvolvedor Pleno.
             
