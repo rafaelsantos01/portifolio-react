@@ -1,16 +1,13 @@
 import Image from "next/image";
-import boy from "../../assets/boy.png";
-import Container from "../container/container";
-import { Button } from "../ui/button";
+import boy from "@/assets/boy.png";
+import Container from "@/components/container/container";
 import { useRouter } from "next/navigation";
+import { AiFillPlayCircle } from 'react-icons/ai';
+import { Button } from "@/components/ui/button";
+
 
 export default function Identifier() {
   const router = useRouter();
-
-  function onClick() {
-    window.open(process.env.NEXT_PUBLIC_URL_CV, "_blank");
-  }
-
   return (
     <Container>
       <div
@@ -41,11 +38,16 @@ export default function Identifier() {
               </Button>
               <Button
                 onClick={() => {
-                  onClick();
+                  router.push("/#projects")
                 }}
-                className="border rounded text-base md:text-lg p-4 md:p-6 border-red-600 text-red-600 hover:bg-white hover:text-black"
+                className="border border-red-500 rounded text-base md:text-lg  md:p-6  text-red-600 hover:animate-pulse hover:underline"
               >
-                CV Download
+                <div className="flex items-center justify-center space-x-2">
+                  <AiFillPlayCircle size={40}/>
+                  <div>
+                    Alguns projetos
+                  </div>
+                </div>
               </Button>
             </div>
           </div>

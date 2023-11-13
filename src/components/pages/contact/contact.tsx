@@ -1,14 +1,14 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { SocialIcon } from "react-social-icons";
-import Container from "../container/container";
-import Title from "../title/title";
-import { Button } from "../ui/button";
-import { Input } from "../ui/input";
-import { Textarea } from "../ui/textarea";
 import { useState } from "react";
 import { ImSpinner } from "react-icons/im";
-import { toast } from "../ui/use-toast";
 import emailjs from "@emailjs/browser";
+import { toast } from "@/components/ui/use-toast";
+import Container from "@/components/container/container";
+import Title from "@/components/title/title";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -124,7 +124,7 @@ export default function Contact() {
         </div>
       </div>
       <p className="text-red-600 text-center mt-8">
-        @ 2023 - Rafael Pereira Dos Santos
+        Copyright © 2023 de Rafael Pereira Dos Santos. Todos os direitos reservados.
       </p>
     </Container>
   );
