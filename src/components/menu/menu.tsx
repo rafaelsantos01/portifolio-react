@@ -18,7 +18,8 @@ const Menu = ({ children }: any) => {
     <div>
       <div className="shadow-md w-full fixed z-20 top-0 left-0 ">
         <div className="md:flex items-center justify-between bg-black py-4 md:px-60  px-7">
-          <div className="justify-between ">
+          <div className="justify-between text-lg font-bold flex">
+          
             <Image alt={""} width={50} height={50} src={rafaSantos} priority />
           </div>
 

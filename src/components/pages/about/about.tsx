@@ -1,7 +1,7 @@
 import Image from "next/image";
-import myPhoto from "../../assets/P_20191226_185840.jpg";
-import Container from "../container/container";
-import Title from "../title/title";
+import myPhoto from "@/assets/P_20191226_185840.jpg";
+import Container from "@/components/container/container";
+import Title from "@/components/title/title";
 
 
 export default function About() {
@@ -20,7 +20,7 @@ export default function About() {
 
         <div className="md:ml-48 flex-row justify-center items-center">
           <div className="mb-10 justify-center items-center flex md:flex-none md:justify-start">
-            <Title title="About" />
+            <Title title="About Me" />
           </div>
           <div className="select-none">
             <p className="mb-2">

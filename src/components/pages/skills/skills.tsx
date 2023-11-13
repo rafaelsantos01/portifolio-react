@@ -1,65 +1,31 @@
-import Container from "../container/container";
-import Title from "../title/title";
+
 import Image from "next/image";
-import java from "../../assets/java-original.svg";
-import spring from "../../assets/spring-original.svg";
-import react from "../../assets/react-original.svg";
-import postgres from "../../assets/postgresql-plain-wordmark.svg";
-import git from "../../assets/git-original.svg";
-import js from "../../assets/javascript-plain.svg";
-import ts from "../../assets/typescript-plain.svg";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
+import { Autoplay, EffectCoverflow } from "swiper/modules";
+import Container from "@/components/container/container";
+import Title from "@/components/title/title";
 
-const items = [
-  {
-    title: "Java",
-    description: "",
-    img: java,
-  },
-  {
-    title: "Spring",
-    description: "",
-    img: spring,
-  },
-  {
-    title: "ReactJS",
-    description: "",
-    img: react,
-  },
-  {
-    title: "Postgres",
-    description: "",
-    img: postgres,
-  },
-  {
-    title: "Git",
-    description: "",
-    img: git,
-  },
-  {
-    title: "TS",
-    description: "",
-    img: ts,
-  },
-  {
-    title: "JS",
-    description: "",
-    img: js,
-  },
-];
 
-export default function Skills() {
+interface ISkills {
+  title:string,
+  img:string
+}
+
+interface ISkillsProps {
+  skills: ISkills[];
+}
+
+export default function Skills({skills}:ISkillsProps) {
+
   return (
     <Container>
       <div
@@ -70,7 +36,7 @@ export default function Skills() {
       </div>
       <div className="flex flex-col md:flex-row items-center justify-center">
         <section className="pb-[2rem] bg-black">
-          <div className="lg:mx-auto max-w-sm md:max-w-7xl">
+          <div className="max-w-sm   lg:max-w-2xl xl:max-w-6xl">
             <Swiper
               modules={[EffectCoverflow, Autoplay]}
               effect={"coverflow"}
@@ -94,6 +60,10 @@ export default function Skills() {
                   spaceBetween: 10,
                   slidesPerView: 3,
                 },
+                1024: {
+                  spaceBetween: 10,
+                  slidesPerView: 4,
+                },
                 1280: {
                   spaceBetween: 20,
                   slidesPerView: 4,
@@ -101,7 +71,7 @@ export default function Skills() {
               }}
               className="coverflow"
             >
-              {items.map((data, index) => {
+              {skills.map((data, index) => {
                 return (
                   <SwiperSlide key={index}>
                     <Card className="border max-w-sm border-red-600 rounded hover:animate-pulse">
@@ -109,9 +79,6 @@ export default function Skills() {
                         <CardTitle className="flex justify-center">
                           {data.title}
                         </CardTitle>
-                        <CardDescription className="flex justify-center">
-                          {data.description}
-                        </CardDescription>
                       </CardHeader>
                       <CardContent className="flex justify-center">
                         <Image src={data.img} width={150} height={150} alt="" />
