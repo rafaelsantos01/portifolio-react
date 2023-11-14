@@ -28,7 +28,12 @@ export default  function Start() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const q = query(collection(db, "projetos"));
+      const firebaseSkillsCollectionPathProjects = process.env.NEXT_PUBLIC_FIREBASE_PROJECTS;
+      if (!firebaseSkillsCollectionPathProjects) {
+        throw new Error("A variável de ambiente NEXT_PUBLIC_FIREBASE_PROJECTS não está definida");
+      }
+      
+      const q = query(collection(db, firebaseSkillsCollectionPathProjects));
 
       const querySnapshot = await getDocs(q);
       const newProjects: IProjects[] = [];
@@ -38,8 +43,12 @@ export default  function Start() {
       });
       setProjects(newProjects); 
 
-
-      const a = query(collection(db, "skills"));
+      
+      const firebaseSkillsCollectionPath = process.env.NEXT_PUBLIC_FIREBASE_SKILLS;
+      if (!firebaseSkillsCollectionPath) {
+        throw new Error("A variável de ambiente NEXT_APP_FIREBASE_SKILLS não está definida");
+      }
+      const a = query(collection(db, firebaseSkillsCollectionPath));
 
       const querySnapshotSkills = await getDocs(a);
       const newSkills: ISkills[] = [];

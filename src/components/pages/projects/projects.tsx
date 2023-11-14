@@ -21,7 +21,7 @@ interface IProjectsProps {
 
 export default function Projects({ projects }: IProjectsProps) {
   const itemsPerPageMobile = 1; 
-  const itemsPerPageDesktop = 4; 
+  const itemsPerPageDesktop = 3; 
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(itemsPerPageDesktop);
 

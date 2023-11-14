@@ -19,16 +19,16 @@ export default function ProjectCard ({ data }:IProjects) {
 
   return (
     <div className="" key={1} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-      <Card className="border-red-600 rounded max-w-[400px] relative">
-        <CardHeader className="h-96">
+      <Card className="border-red-600 rounded max-w-[450px] relative">
+        <CardHeader className="">
           <div className=" justify-center items-center space-y-10">
             <div className="">
               <Image
-                className="h-64"
+                className="h-80"
                 src={data.urlImage}
                 alt=""
-                width={600}
-                height={600}
+                width={800}
+                height={800}
                 priority
               />
             </div>
@@ -49,7 +49,7 @@ export default function ProjectCard ({ data }:IProjects) {
                 </CardDescription>
               </div>
             </CardContent>
-            <CardFooter className="flex justify-end">
+            <div className="flex justify-end">
               <Button
                 onClick={() => {
                   window.open(`${data.linkGit}`);
@@ -58,7 +58,7 @@ export default function ProjectCard ({ data }:IProjects) {
               >
                 <FiExternalLink size={23} />
               </Button>
-            </CardFooter>
+            </div>
           </div>
         )}
       </Card>
