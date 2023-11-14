@@ -7,15 +7,14 @@ Este repositório é uma recriação do meu portfólio online, destinado a mostr
 - Projeto pessoal para demonstrar minhas habilidades e experiência.
 - Layout responsivo para uma ótima experiência de usuário em dispositivos móveis e desktop.
 - Apresentação de projetos, habilidades e experiência profissional.
-- Integração com GitHub para exibir meus repositórios e contribuições.
+- Integração com Firebase para expor meus projetos e habilidades.
 
 🔧 Tecnologias utilizadas:
 
 - HTML, CSS, JavaScript
 - React para criação do front-end
 - Next.js para otimização e pré-renderização
-- Tailwind CSS para estilos responsivos
-- Integração com o firebase para exposição e atualização dos projetos
+- Tailwind CSS para estilos e responsividade
 
 🌐 Acesse o portfólio ao vivo [Clicando aqui](https://portifolio-react-rose-tau.vercel.app/)
 
