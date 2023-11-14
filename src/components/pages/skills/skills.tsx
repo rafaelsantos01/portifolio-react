@@ -94,23 +94,3 @@ export default function Skills({skills}:ISkillsProps) {
     </Container>
   );
 }
-
-{
-  /* <div>
-<Carrosel />
-</div> */
-}
-// {items.map((data, index) => (
-//   <div key={index} className="flex md:w-44 ">
-
-//       <Card className="border border-red-600 rounded hover:animate-pulse">
-//        <CardHeader>
-//          <CardTitle>{data.title}</CardTitle>
-//          <CardDescription>{data.description}</CardDescription>
-//        </CardHeader>
-//        <CardContent>
-//          <Image src={data.img} width={100} height={100} alt="" />
-//       </CardContent>
-//      </Card>
-//    </div>
-//  ))}
