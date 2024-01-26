@@ -124,7 +124,8 @@ export default function Contact() {
         </div>
       </div>
       <p className="text-red-600 text-center mt-8">
-        Copyright © 2023 de Rafael Pereira Dos Santos. Todos os direitos reservados.
+        Copyright © 2023 de Rafael Pereira Dos Santos. Todos os direitos
+        reservados.
       </p>
     </Container>
   );
