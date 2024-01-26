@@ -1,6 +1,3 @@
-import { useEffect, useState } from "react";
-import { db } from "../../utils/firebase";
-import { collection, getDocs, query } from "firebase/firestore";
 import Menu from "@/components/menu/menu";
 import Identifier from "@/components/pages/start/identifier";
 import Contact from "@/components/pages/contact/contact";
