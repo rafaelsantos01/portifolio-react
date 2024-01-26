@@ -2,9 +2,8 @@ import Image from "next/image";
 import boy from "@/assets/boy.png";
 import Container from "@/components/container/container";
 import { useRouter } from "next/navigation";
-import { AiFillPlayCircle } from 'react-icons/ai';
+import { AiFillPlayCircle } from "react-icons/ai";
 import { Button } from "@/components/ui/button";
-
 
 export default function Identifier() {
   const router = useRouter();
@@ -38,22 +37,20 @@ export default function Identifier() {
               </Button>
               <Button
                 onClick={() => {
-                  router.push("/#projects")
+                  router.push("/#projects");
                 }}
                 className="border border-red-500 rounded text-base md:text-lg  md:p-6  text-red-600 hover:animate-pulse hover:underline"
               >
                 <div className="flex items-center justify-center space-x-2">
-                  <AiFillPlayCircle size={40}/>
-                  <div>
-                    Alguns projetos
-                  </div>
+                  <AiFillPlayCircle size={40} />
+                  <div>Alguns projetos</div>
                 </div>
               </Button>
             </div>
           </div>
         </div>
-        <div className="mt-6 md:mt-0">
-          <Image className="" src={boy} alt="" width={460} height={460} priority/>
+        <div className="mt-6 md:mt-0 w-[460] h-[460]">
+          <Image className="" src={boy} alt="" priority />
         </div>
       </div>
     </Container>

@@ -1,96 +1,86 @@
-
-import Image from "next/image";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectCoverflow } from "swiper/modules";
 import Container from "@/components/container/container";
-import Title from "@/components/title/title";
-
+import Marquee from "react-fast-marquee";
+import Technologies from "./technologies";
+import { Element } from "react-scroll";
+import ts from "../../../../public/skills/ts2.svg";
+import react from "../../../../public/skills/react.svg";
+import next from "../../../../public/skills/next.svg";
+import nest from "../../../../public/skills/nestJS.svg";
+import node from "../../../../public/skills/nodeJS.svg";
+import java from "../../../../public/skills/java.svg";
+import spring from "../../../../public/skills/spring.svg";
+import postgres from "../../../../public/skills/postgres.svg";
 
 interface ISkills {
-  title:string,
-  img:string
+  id: number;
+  title: string;
+  img: any;
 }
 
-interface ISkillsProps {
-  skills: ISkills[];
-}
+const skills: ISkills[] = [
+  {
+    id: 2,
+    img: ts,
+    title: "TypeScript",
+  },
+  {
+    id: 3,
+    img: react,
+    title: "React",
+  },
+  {
+    id: 4,
+    img: next,
+    title: "Next",
+  },
+  {
+    id: 5,
+    img: nest,
+    title: "Nest",
+  },
+  {
+    id: 6,
+    img: node,
+    title: "Node",
+  },
+  {
+    id: 9,
+    img: java,
+    title: "Java",
+  },
+  {
+    id: 10,
+    img: spring,
+    title: "Spring Boot",
+  },
+  {
+    id: 11,
+    img: postgres,
+    title: "Postgres",
+  },
+];
 
-export default function Skills({skills}:ISkillsProps) {
-
+export default function Skills() {
   return (
     <Container>
-      <div
-        className="flex flex-col items-center justify-center mb-10"
-        id="skills"
-      >
-        <Title title="Skills" />
-      </div>
-      <div className="flex flex-col md:flex-row items-center justify-center">
-        <section className="pb-[2rem] bg-black">
-          <div className="max-w-sm   lg:max-w-2xl xl:max-w-6xl">
-            <Swiper
-              modules={[EffectCoverflow, Autoplay]}
-              effect={"coverflow"}
-              loop={true}
-              pagination={{
-                clickable: true,
-              }}
-              centeredSlides={true}
-              grabCursor={true}
-              coverflowEffect={{
-                rotate: 0,
-                slideShadows: false,
-              }}
-              autoplay={{
-                delay: 2000,
-                stopOnLastSlide: false,
-                disableOnInteraction: false,
-              }}
-              breakpoints={{
-                0: {
-                  spaceBetween: 10,
-                  slidesPerView: 3,
-                },
-                1024: {
-                  spaceBetween: 10,
-                  slidesPerView: 4,
-                },
-                1280: {
-                  spaceBetween: 20,
-                  slidesPerView: 4,
-                },
-              }}
-              className="coverflow"
-            >
-              {skills.map((data, index) => {
-                return (
-                  <SwiperSlide key={index}>
-                    <Card className="border max-w-sm border-red-600 rounded hover:animate-pulse">
-                      <CardHeader>
-                        <CardTitle className="flex justify-center">
-                          {data.title}
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent className="flex justify-center">
-                        <Image src={data.img} width={150} height={150} alt="" />
-                      </CardContent>
-                    </Card>
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
+      <Element name="Habilidades">
+        <div className=" mt-6 xl:mt-0 py-2 ">
+          <div className="">
+            <div className="gap-2 py-2 md:flex-center-row md:gap-4 md:py-4">
+              <div>
+                <Marquee autoFill speed={60} className=" rounded-3xl">
+                  {skills.map(({ id, title, img }) => (
+                    <Technologies key={id} srcImg={img} skill={title} />
+                  ))}
+                </Marquee>
+              </div>
+            </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </Element>
     </Container>
   );
 }
