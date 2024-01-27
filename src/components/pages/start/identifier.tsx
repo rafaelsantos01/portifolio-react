@@ -28,8 +28,9 @@ export default function Identifier() {
             <Typewriter
               options={{
                 strings: [
-                  "Tudo é uma questão do quanto você deseja e do que está disposto a fazer para conseguir.",
-                  "Software Developer.",
+                  `"Tudo é uma questão do quanto você deseja e do que está disposto a fazer para conseguir."`,
+                  "Desenvolvedor Web",
+                  "Full Stack",
                 ],
                 autoStart: true,
                 loop: true,
