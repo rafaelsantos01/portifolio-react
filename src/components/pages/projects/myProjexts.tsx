@@ -5,7 +5,7 @@ import nicetry from "../../../../public/projects/niceTry.png";
 import Project from "./projects";
 import Title from "@/components/title/title";
 
-export const MyProjects = () => {
+export default function MyProjects() {
   return (
     <Container>
       <div className="flex items-center justify-center" id="projects">
@@ -48,7 +48,7 @@ export const MyProjects = () => {
       </Element>
     </Container>
   );
-};
+}
 
 const gitFinder = [
   {
