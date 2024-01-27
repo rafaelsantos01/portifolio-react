@@ -9,7 +9,7 @@ export default function MyProjects() {
   return (
     <Container>
       <div className="flex items-center justify-center" id="projects">
-        <Title title={"Projetos"} />
+        <Title title={"Projects"} />
       </div>
       <Element name="Projetos">
         <div className="w-full px-[5%] xl:px-[8%] 2xl:px-[5%]">

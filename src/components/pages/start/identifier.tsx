@@ -4,9 +4,11 @@ import Container from "@/components/container/container";
 import { useRouter } from "next/navigation";
 import { AiFillPlayCircle } from "react-icons/ai";
 import { Button } from "@/components/ui/button";
+import Typewriter from "typewriter-effect";
 
 export default function Identifier() {
   const router = useRouter();
+
   return (
     <Container>
       <div
@@ -21,9 +23,19 @@ export default function Identifier() {
             os <span className="text-red-600">Sant</span>
             os
           </h1>
+
           <h4 className="text-base md:text-sm  lg:text-sm xl:text-xl font-normal">
-            Tudo é uma questão do quanto você deseja e do que está disposto a
-            fazer para conseguir.
+            <Typewriter
+              options={{
+                strings: [
+                  "Tudo é uma questão do quanto você deseja e do que está disposto a fazer para conseguir.",
+                  "Software Developer.",
+                ],
+                autoStart: true,
+                loop: true,
+                delay: 75,
+              }}
+            />
           </h4>
           <div className="mt-6 md:mt-9">
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-7">
