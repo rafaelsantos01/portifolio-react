@@ -12,9 +12,11 @@ const FloatingButton = () => {
         onClick={() => {
           router.push("/#");
         }}
-        className=" py-7 px-2 rounded-full shadow-lg hover:animate-pulse"
+        className=" py-7 px-2 rounded-full shadow-lg hover:animate-bounce "
       >
-        <BsFillArrowUpCircleFill color="#dd1010" size={38} />
+        <div className="bg-white rounded-full">
+          <BsFillArrowUpCircleFill color="#dd1010" size={40} className="" />
+        </div>
       </Button>
     </div>
   );

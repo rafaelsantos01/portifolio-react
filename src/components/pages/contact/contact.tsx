@@ -58,20 +58,20 @@ export default function Contact() {
         <Title title="Contact" />
         <div className="flex space-x-7 mt-11 mb-6">
           <SocialIcon
-            className="hover:animate-pulse"
+            className="hover:animate-bounce"
             network="github"
             url="http://github.com/rafaelsantos01"
             target="_blank"
           />
 
           <SocialIcon
-            className="hover:animate-pulse"
+            className="hover:animate-bounce"
             network="linkedin"
             url="https://www.linkedin.com/in/rafael-santos-7a938b237/"
             target="_blank"
           />
           <SocialIcon
-            className="hover:animate-pulse"
+            className="hover:animate-bounce"
             network="whatsapp"
             url="https://wa.me/55047996581330"
             target="_blank"
