@@ -137,14 +137,14 @@ const gitFinder = [
 
 const easyOrderSkills = [
   {
-    id: "2",
-    skill: "React",
-    img: "/skills/react.svg",
-  },
-  {
     id: "1",
     skill: "TypeScript",
     img: "/skills/ts2.svg",
+  },
+  {
+    id: "2",
+    skill: "React",
+    img: "/skills/react.svg",
   },
   {
     id: "3",
