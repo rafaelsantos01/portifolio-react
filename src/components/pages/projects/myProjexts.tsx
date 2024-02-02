@@ -78,9 +78,10 @@ export default function MyProjects() {
               <div className="max-w-screen-md mx-auto">
                 <ReactPaginate
                   className="flex items-center justify-center space-x-3"
-                  previousLabel={<GoArrowLeft />}
-                  nextLabel={<GoArrowRight />}
-                  //breakLabel={<span className="text-xl">...</span>}
+                  previousLabel={<GoArrowLeft className="text-xl" />}
+                  nextLabel={<GoArrowRight className="text-xl" />}
+                  breakLabel={<span className="text-xl">...</span>}
+                  breakClassName={"break-me"}
                   pageCount={pageCount}
                   marginPagesDisplayed={2}
                   pageRangeDisplayed={5}
