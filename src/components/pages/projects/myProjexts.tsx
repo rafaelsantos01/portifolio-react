@@ -8,6 +8,7 @@ import ReactPaginate from "react-paginate";
 import { useState } from "react";
 import { GoArrowLeft } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
+import easyOrder from "../../../../public/projects/easyOrder.png";
 
 export default function MyProjects() {
   const projectsData = [
@@ -28,6 +29,15 @@ export default function MyProjects() {
       itemsPosition: "end",
       link: "https://rifei-web-xi.vercel.app",
       skill: niceTrySkills,
+    },
+    {
+      title: "Em andamento",
+      text: "O projeto inova na gestão de pré-vendas, destacando-se por um catálogo intuitivo, carrinho de compras dinâmico, autenticação segura e relatórios analíticos. Proporciona uma experiência do cliente otimizada, simplificando processos e aumentando a eficiência operacional.",
+      srcImg: easyOrder,
+      flexReverse: "lg:flex-row",
+      itemsPosition: "end",
+      link: "",
+      skill: easyOrderSkills,
     },
   ];
 
@@ -122,6 +132,44 @@ const gitFinder = [
     id: "4",
     skill: "Vite",
     img: "/skills/vite.svg",
+  },
+];
+
+const easyOrderSkills = [
+  {
+    id: "2",
+    skill: "React",
+    img: "/skills/react.svg",
+  },
+  {
+    id: "1",
+    skill: "TypeScript",
+    img: "/skills/ts2.svg",
+  },
+  {
+    id: "3",
+    skill: "Tailwind",
+    img: "/skills/tailwind.svg",
+  },
+  {
+    id: "4",
+    skill: "Next",
+    img: "/skills/next.svg",
+  },
+  {
+    id: "5",
+    skill: "Java",
+    img: "/skills/java.svg",
+  },
+  {
+    id: "6",
+    skill: "Spring",
+    img: "/skills/spring.svg",
+  },
+  {
+    id: "7",
+    skill: "Postgres",
+    img: "/skills/postgres.svg",
   },
 ];
 
