@@ -77,33 +77,41 @@ export default function MyProjects() {
             {pageCount > 1 && (
               <div className="max-w-screen-md mx-auto">
                 <ReactPaginate
+                  breakLabel="..."
+                  nextLabel="next >"
+                  onPageChange={handlePageClick}
+                  pageRangeDisplayed={5}
+                  pageCount={pageCount}
+                  previousLabel="< previous"
+                  renderOnZeroPageCount={null}
+                />
+                {/* <ReactPaginate
                   className="flex items-center justify-center space-x-3"
-                  previousLabel={"Previous"}
-                  nextLabel={"Next"}
+                  previousLabel={<GoArrowLeft className="text-xl" />}
+                  nextLabel={<GoArrowRight className="text-xl" />}
                   breakLabel={<span className="text-xl">...</span>}
-                  breakClassName={"break-me"}
+                  breakClassName={"inline-block m-1"}
                   pageCount={pageCount}
                   marginPagesDisplayed={2}
                   pageRangeDisplayed={5}
                   onPageChange={handlePageClick}
-                  // containerClassName={
-                  //   "list-none flex items-center justify-center"
-                  // }
+                  containerClassName={
+                    "list-none flex items-center justify-center"
+                  }
                   activeClassName={"bg-red-600 text-white rounded-full "}
-                  // pageClassName={"inline-block m-1 "}
+                  pageClassName={"inline-block m-1 "}
                   pageLinkClassName={
                     "block w-8 h-8 leading-8 text-center rounded-full flex items-center justify-center border border-red-600 hover:bg-red-600 focus:outline-none focus:border-red-600 focus:border-red-600 focus:ring-opacity-50"
                   }
-                  //  breakClassName={"inline-block m-1"}
-                  //  previousClassName={"inline-block m-1"}
+                  previousClassName={"inline-block m-1"}
                   previousLinkClassName={
                     "block w-8 h-8 leading-8 text-center flex items-center justify-center rounded-full border border-red-600 hover:bg-red-600 focus:outline-none focus:border-red-600 focus:border-red-600 focus:ring-opacity-50"
                   }
-                  //nextClassName={"inline-block m-1 "}
+                  nextClassName={"inline-block m-1 "}
                   nextLinkClassName={
                     "block w-8 h-8 leading-8 text-center rounded-full flex items-center justify-center border border-red-600 hover:bg-red-600 focus:outline-none focus:border-red-600  focus:border-red-600 focus:ring-opacity-50"
                   }
-                />
+                /> */}
               </div>
             )}
           </div>
