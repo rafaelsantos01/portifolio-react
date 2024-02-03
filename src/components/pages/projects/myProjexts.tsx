@@ -41,15 +41,13 @@ export default function MyProjects() {
     },
   ];
 
-  const itemsPerPage = 2;
-  const pageCount = Math.ceil(projectsData.length / itemsPerPage);
-
   const [currentPage, setCurrentPage] = useState(0);
+  const itemsPerPage = 2;
+  const pageCount = 2;
 
   const handlePageClick = ({ selected }: any) => {
     setCurrentPage(selected);
   };
-
   const startIndex = currentPage * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const displayedProjects = projectsData.slice(startIndex, endIndex);
@@ -77,15 +75,6 @@ export default function MyProjects() {
             {pageCount > 1 && (
               <div className="max-w-screen-md mx-auto">
                 <ReactPaginate
-                  breakLabel="..."
-                  nextLabel="next >"
-                  onPageChange={handlePageClick}
-                  pageRangeDisplayed={5}
-                  pageCount={pageCount}
-                  previousLabel="< previous"
-                  renderOnZeroPageCount={null}
-                />
-                {/* <ReactPaginate
                   className="flex items-center justify-center space-x-3"
                   previousLabel={<GoArrowLeft className="text-xl" />}
                   nextLabel={<GoArrowRight className="text-xl" />}
@@ -111,7 +100,7 @@ export default function MyProjects() {
                   nextLinkClassName={
                     "block w-8 h-8 leading-8 text-center rounded-full flex items-center justify-center border border-red-600 hover:bg-red-600 focus:outline-none focus:border-red-600  focus:border-red-600 focus:ring-opacity-50"
                   }
-                /> */}
+                />
               </div>
             )}
           </div>
