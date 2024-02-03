@@ -5,7 +5,7 @@ import niceTry from "../../../../public/projects/niceTry.png";
 import Project from "./projects";
 import Title from "@/components/title/title";
 import ReactPaginate from "react-paginate";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { GoArrowLeft } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
 import easyOrder from "../../../../public/projects/easyOrder.png";
@@ -41,13 +41,30 @@ export default function MyProjects() {
     },
   ];
 
+  // const [currentPage, setCurrentPage] = useState(0);
+  // const itemsPerPage = 2;
+  // const pageCount = Math.ceil(projectsData.length / itemsPerPage);
+
+  // const handlePageClick = ({ selected }: any) => {
+  //   setCurrentPage(selected);
+  // };
+  // const startIndex = currentPage * itemsPerPage;
+  // const endIndex = startIndex + itemsPerPage;
+  // const displayedProjects = projectsData.slice(startIndex, endIndex);
+
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 2;
-  const pageCount = 2;
+  const [pageCount, setPageCount] = useState(0);
+
+  useEffect(() => {
+    // Calcule o pageCount quando projectsData é atualizado
+    setPageCount(Math.ceil(projectsData.length / itemsPerPage));
+  }, [projectsData, itemsPerPage]);
 
   const handlePageClick = ({ selected }: any) => {
     setCurrentPage(selected);
   };
+
   const startIndex = currentPage * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const displayedProjects = projectsData.slice(startIndex, endIndex);
