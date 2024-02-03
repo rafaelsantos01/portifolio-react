@@ -41,30 +41,13 @@ export default function MyProjects() {
     },
   ];
 
-  // const [currentPage, setCurrentPage] = useState(0);
-  // const itemsPerPage = 2;
-  // const pageCount = Math.ceil(projectsData.length / itemsPerPage);
-
-  // const handlePageClick = ({ selected }: any) => {
-  //   setCurrentPage(selected);
-  // };
-  // const startIndex = currentPage * itemsPerPage;
-  // const endIndex = startIndex + itemsPerPage;
-  // const displayedProjects = projectsData.slice(startIndex, endIndex);
-
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 2;
-  const [pageCount, setPageCount] = useState(0);
-
-  useEffect(() => {
-    // Calcule o pageCount quando projectsData é atualizado
-    setPageCount(Math.ceil(projectsData.length / itemsPerPage));
-  }, [projectsData, itemsPerPage]);
+  const pageCount = Math.ceil(projectsData.length / itemsPerPage);
 
   const handlePageClick = ({ selected }: any) => {
     setCurrentPage(selected);
   };
-
   const startIndex = currentPage * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const displayedProjects = projectsData.slice(startIndex, endIndex);
