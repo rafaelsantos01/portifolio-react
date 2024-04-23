@@ -60,7 +60,7 @@ export default function Project({
             alt="Project"
             src={srcImg}
             priority
-            className="rounded-3xl max-h-64"
+            className="rounded-3xl max-h-64 border"
           />
         </div>
       </a>
