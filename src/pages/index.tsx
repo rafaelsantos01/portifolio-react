@@ -4,7 +4,7 @@ import FloatingButton from "@/components/FloatingButton/floatingButton";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-black">
       <Head>
         <title>Rafael Santos</title>
       </Head>
