@@ -6,7 +6,10 @@ import Title from "@/components/title/title";
 export default function About() {
   return (
     <Container>
-      <div className="justify-centers items-center md:flex my-20" id="about">
+      <div
+        className="justify-centers items-center md:flex my-20 text-white"
+        id="about"
+      >
         <div className="flex items-center justify-center md:flex-none">
           <Image
             className=" rounded-full w-40 h-40 md:w-[300px] md:h-[300px] border border-red-600"
@@ -22,7 +25,7 @@ export default function About() {
             <Title title="About Me" />
           </div>
           <div className="select-none">
-            <p className="mb-2">
+            <p className="mb-2 text-white">
               Meu nome é Rafael, um desenvolvedor Full-Stack com mais de um ano
               de experiência, atualmente residindo em Brusque, SC.
             </p>
