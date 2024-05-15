@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
+    "@radix-ui/react-separator": "^1.0.3",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-toast": "^1.1.5",
     "@types/react-scroll": "^1.8.10",
@@ -18,7 +19,7 @@
     "bootstrap-icons": "^1.11.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
-    "embla-carousel-react": "^8.0.0-rc21",
+    "embla-carousel-react": "^8.0.4",
     "firebase": "^10.5.2",
     "firebase-tools": "^12.8.0",
     "lucide-react": "^0.284.0",

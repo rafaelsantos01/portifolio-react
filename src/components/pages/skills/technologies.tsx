@@ -6,6 +6,7 @@ interface IRequest {
   srcImg: any;
   classDiv?: any;
   classImg?: any;
+  classTitle?: any;
 }
 
 export default function Technologies({
@@ -13,11 +14,12 @@ export default function Technologies({
   srcImg,
   classDiv,
   classImg,
+  classTitle,
 }: IRequest) {
   return (
     <div
       className={cn(
-        "min-w-[100px]  my-2 md:mr-1 flex md:flex-col justify-center items-center select-none",
+        "min-w-[100px]  my-2 md:mr-1 flex flex-col justify-center items-center select-none",
         classDiv
       )}
     >
@@ -29,7 +31,12 @@ export default function Technologies({
       >
         <Image src={srcImg} alt="a" priority width={40} height={40} />
       </div>
-      <p className=" tracking-widest font-semibold text-[.625rem] md:text-xs">
+      <p
+        className={cn(
+          " tracking-widest font-semibold text-[.625rem] md:text-xs",
+          classTitle
+        )}
+      >
         {skill}
       </p>
     </div>
