@@ -30,13 +30,13 @@ export default function Project({
 }: IRequest) {
   return (
     <div
-      className={`text-center flex flex-col lg:flex-row gap-5 xl:gap-0 items-center mb-[1.875rem] lg:text-start md:items-start lg:mb-28 xl:mb-32 ${flexReverse}`}
+      className={`bg-zinc-900 rounded-3xl p-10 text-center flex flex-col lg:flex-row gap-5 xl:gap-0 items-center mb-[1.875rem] lg:text-start md:items-start lg:mb-28 xl:mb-32 ${flexReverse}`}
     >
       <div className="lg:w-[70%] flex flex-col gap-6">
         <h1 className="text-base font-semibold md:text-3xl">{title}</h1>
         <div className="space-y-4">
           <p
-            className={`max-w-[600px] 2xl:max-w-[800px] text-[#D4D4D4] text-xs md:text-lg xl:text-xl text-${itemsPosition}`}
+            className={`max-w-[600px] 2xl:max-w-[800px] text-${itemsPosition}`}
           >
             {text}
           </p>
