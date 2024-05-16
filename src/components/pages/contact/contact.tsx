@@ -25,11 +25,13 @@ export default function Contact() {
       email: email,
       message: message,
     };
+    const serviceEmail = process.env.NEXT_PUBLIC_SERVICE_EMAIL || "";
+    const templateEmail = process.env.NEXT_PUBLIC_TEMPLATE_EMAIL || "";
 
     await emailjs
       .send(
-        "service_l514cfb",
-        "template_9chousa",
+        serviceEmail,
+        templateEmail,
         templateParams,
         process.env.NEXT_PUBLIC_SECRECT_KEY
       )
@@ -54,79 +56,84 @@ export default function Contact() {
 
   return (
     <Container>
-      <div className="flex flex-col items-center justify-center" id="contact">
-        <Title title="Contact" />
-        <div className="flex space-x-7 mt-11 mb-6">
-          <SocialIcon
-            className="hover:animate-bounce"
-            network="github"
-            url="http://github.com/rafaelsantos01"
-            target="_blank"
-          />
+      <div>
+        <div
+          className="flex flex-col items-center justify-center "
+          id="contact"
+        >
+          <Title title="Contact" />
+          <div className="flex space-x-7 mt-11 mb-6 ">
+            <SocialIcon
+              className=""
+              network="github"
+              url="http://github.com/rafaelsantos01"
+              target="_blank"
+            />
 
-          <SocialIcon
-            className="hover:animate-bounce"
-            network="linkedin"
-            url="https://www.linkedin.com/in/rafael-santos-7a938b237/"
-            target="_blank"
-          />
-          <SocialIcon
-            className="hover:animate-bounce"
-            network="whatsapp"
-            url="https://wa.me/55047996581330"
-            target="_blank"
-          />
-        </div>
-        <div className="w-full md:w-2/6 mt-4">
-          <Card className="rounded border-red-600">
-            <CardHeader></CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <Input
-                  className="bg-black border-red-600 placeholder:text-zinc-500 placeholder:opacity-70"
-                  placeholder="Seu nome"
-                  required
-                  type="text"
-                  value={name}
-                  onChange={(event) => setName(event.target.value)}
-                />
-                <Input
-                  className="bg-black border-red-600 placeholder:text-zinc-500 placeholder:opacity-70"
-                  placeholder="Seu email"
-                  type="email"
-                  required
-                  value={email}
-                  onChange={(event) => setEmail(event.target.value)}
-                />
-                <Textarea
-                  className="bg-black border-red-600 placeholder:text-zinc-500 placeholder:opacity-70"
-                  placeholder="Deixe sua mensagem."
-                  required
-                  value={message}
-                  onChange={(event) => setMessage(event.target.value)}
-                />
+            <SocialIcon
+              className=""
+              network="linkedin"
+              url="https://www.linkedin.com/in/rafael-santos-7a938b237/"
+              target="_blank"
+            />
+            <SocialIcon
+              className=""
+              network="whatsapp"
+              url="https://wa.me/55047996581330"
+              target="_blank"
+            />
+          </div>
+          <div className="w-full md:w-2/6 mt-4 bg-zinc-900 shadow-xl shadow-red-600 rounded-3xl">
+            <Card className="rounded-3xl border-zinc-900">
+              <CardHeader></CardHeader>
+              <CardContent>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <Input
+                    className="bg-black border-red-600 rounded-xl placeholder:text-white placeholder:opacity-70"
+                    placeholder="Seu nome"
+                    required
+                    type="text"
+                    value={name}
+                    onChange={(event) => setName(event.target.value)}
+                  />
+                  <Input
+                    className="bg-black border-red-600 rounded-xl placeholder:text-white placeholder:opacity-70"
+                    placeholder="Seu email"
+                    type="email"
+                    required
+                    value={email}
+                    onChange={(event) => setEmail(event.target.value)}
+                  />
+                  <Textarea
+                    className="bg-black border-red-600 rounded-xl placeholder:text-white placeholder:opacity-70"
+                    placeholder="Deixe sua mensagem."
+                    required
+                    value={message}
+                    onChange={(event) => setMessage(event.target.value)}
+                  />
 
-                {spin == false && (
-                  <Button className="rounded text-lg p-6 bg-red-600 hover:bg-red-500 hover:text-white">
-                    Enviar
-                  </Button>
-                )}
-                {spin == true && (
-                  <Button className="rounded text-lg p-6 bg-red-600 hover:bg-red-500 hover:text-white">
-                    <div className="animate-spin">
-                      <ImSpinner />
-                    </div>
-                  </Button>
-                )}
-              </form>
-            </CardContent>
-          </Card>
+                  {spin == false && (
+                    <Button className="rounded w-full text-lg p-6 bg-red-600 hover:bg-red-500 hover:text-white">
+                      Enviar
+                    </Button>
+                  )}
+                  {spin == true && (
+                    <Button className="rounded w-full text-lg p-6 bg-red-600 hover:bg-red-500 hover:text-white">
+                      <div className="animate-spin">
+                        <ImSpinner />
+                      </div>
+                    </Button>
+                  )}
+                </form>
+              </CardContent>
+            </Card>
+          </div>
         </div>
+        <p className="text-red-600 text-center mt-8">
+          Copyright © 2024 de Rafael Pereira Dos Santos. Todos os direitos
+          reservados.
+        </p>
       </div>
-      <p className="text-red-600 text-center mt-8">
-        Copyright © 2023 de Rafael Pereira Dos Santos. Todos os direitos
-        reservados.
-      </p>
     </Container>
   );
 }
