@@ -7,12 +7,12 @@ export default function About() {
   return (
     <Container>
       <div
-        className="justify-centers items-center md:flex my-20 text-white"
+        className="justify-centers items-center md:flex my-20 text-white bg-zinc-900 p-10 rounded-xl shadow-lg shadow-red-600"
         id="about"
       >
         <div className="flex items-center justify-center md:flex-none">
           <Image
-            className=" rounded-full w-40 h-40 md:w-[300px] md:h-[300px] border border-red-600"
+            className=" rounded-full w-40 h-40 md:w-[300px] md:h-[300px] "
             src={myPhoto}
             alt={""}
             width={400}
@@ -20,11 +20,11 @@ export default function About() {
           />
         </div>
 
-        <div className="md:ml-48 flex-row justify-center items-center">
+        <div className="md:ml-48 flex-row justify-center items-center ">
           <div className="mb-10 justify-center items-center flex md:flex-none md:justify-start">
             <Title title="About Me" />
           </div>
-          <div className="select-none">
+          <div className="select-none ">
             <p className="mb-2 text-white">
               Meu nome é Rafael, um desenvolvedor Full-Stack com mais de um ano
               de experiência, atualmente residindo em Brusque, SC.

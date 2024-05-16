@@ -83,7 +83,7 @@ export default function SmallProjects() {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="bg-zinc-900 rounded-3xl p-6 mt-2 md:mt-0"
+            className="bg-zinc-900 rounded-3xl p-6 mt-2 md:mt-0 shadow-lg shadow-red-600"
           >
             <CardProject
               description={project.description}
